@@ -1,0 +1,9 @@
+[submodule "ucfaorh/www/js"]
+	path = ucfaorh/www/js
+	url = https://github.com/livirhind/cege0043-jsReference
+[submodule "ucfaorh/www/css"]
+	path = ucfaorh/www/css
+	url = https://github.com/livirhind/cege0043-cssReference
+[submodule "ucfaorh/www/images"]
+	path = ucfaorh/www/images
+	url = https://github.com/livirhind/cege0043-imagesReference
