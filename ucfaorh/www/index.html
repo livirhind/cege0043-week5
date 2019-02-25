@@ -124,7 +124,7 @@ crossorigin=""></script>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+          <a class="mdl-navigation__link" href="" onclick='callDivNodeJSChange(); return false;'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Change Div Content</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
@@ -136,6 +136,7 @@ crossorigin=""></script>
       <main class="mdl-layout__content mdl-color--grey-100">
         <!-- the mapid div will hold the map -->
         <div id="mapid" style="width: 600px; height: 400px;"></div>
+        <div id="ajaxtest" style="width: 1600px; height: 20px; "></div>
         <div class="mdl-grid demo-content">
             <div class="demo-separator mdl-cell--1-col"></div>
             <div id="ucllogo" name="ucllogo">div goes here </div>
