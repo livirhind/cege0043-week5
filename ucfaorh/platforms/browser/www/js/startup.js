@@ -1,12 +1,3 @@
-function trackAndCircle () {
-         trackLocation();
-	     addPointLinePoly();
-	     getEarthquakes();
-         }
-
-
-
-
 function startup() {
 	document.addEventListener('DOMContentLoaded', function(){
 		zoomOnMap();
@@ -14,6 +5,7 @@ function startup() {
 	document.addEventListener('DOMContentLoaded', function(){
 		trackAndCircle();
 	},false);
+	document.addEventListener('DOMContentLoaded', function(){
+		getPort();
+	},false);
 }
-
-
