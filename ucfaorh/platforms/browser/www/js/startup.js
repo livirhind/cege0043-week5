@@ -8,7 +8,7 @@ function startup() {
 		zoomOnMap();
 	},false)
 	document.addEventListener('DOMContentLoaded', function(){
-		trackAndCircle();
+		loadW3HTML();
 	},false);
 }
 
