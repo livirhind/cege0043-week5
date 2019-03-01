@@ -137,10 +137,42 @@ crossorigin=""></script>
         <!-- the mapid div will hold the map -->
         <div id="mapid" style="width: 600px; height: 400px;"></div>
         <!-- adding a DIV to be changed by AJAX -->
-       <div id='ajaxtest' style='width: 1600px; height: 20px;'>
+       <div id='ajaxtest' style='width: 1600px; height: 20px;'></div>
        <!-- copying html file from creatFormhtml -->
-         <div w3-include-html="createForm.html"></div>
-       </div>
+         <!--<div w3-include-html="createForm.html"></div>
+       </div> -->
+       <div>
+    <label for="name">Name</label><input type="text" size="25" id="name"/><br />
+    <label for="surname">Surname</label><input type="text" size="25" id="surname"/><br />
+    <label for="module">Module</label><input type="text" size="25" id="module"/><br />
+    <label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/><br />
+    <label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br />
+  <p>Would you like lectures in the morning or afternoon?</p>
+  Morning: <input type="radio" name="amorpm" id="morning" /><br />
+  Afternoon: <input type="radio" name="amorpm" id="afternoon" /><br />
+
+  <p>Which modules are you taking?</p>
+  CEGEG077: <input type="checkbox" name="modules" id=check1 value="CEGEG077" checked="yes" /><br />
+  CEGEG129: <input type="checkbox" name="modules" id=check2 value="CEGEG129" /><br />
+  CEGEG082: <input type="checkbox" name="modules" id=check3 value="CEGEG082" /><br />
+  CEGEG034: <input type="checkbox" name="modules" id=check4 value="CEGEG077" /><br />
+
+  <p>What is your first language?</p> 
+  <select name="languageselectbox" id="languageselectbox">
+  <option >English</option>
+  <option >Mandarin</option>
+  <option >Greek</option>
+  <option >Italian</option>
+  <option >Spanish</option>
+  <option >Other</option>
+                          
+</select> 
+
+<p><button id="startUpload" onclick="startDataUpload();"> Start Data Upload</button></p>
+<div id="dataUploadResult"> The result of the upload goes here</div>
+
+<script src="uploadData.js"></script>
+
         <div class="mdl-grid demo-content">
             <div class="demo-separator mdl-cell--1-col"></div>
             <div id="ucllogo" name="ucllogo">div goes here </div>
@@ -158,6 +190,6 @@ crossorigin=""></script>
 <script src="js/utilities.js"></script>
 <script src="js/AJAX.js"></script>
 <script src="js/uploadData.js"></script>
-<script>startup();</script>
+<!-- <script>startup();</script> -->
   </body>
 </html>
