@@ -35,15 +35,14 @@ function startDataUpload(){
 	processData(postString);
 }
 
-var client; //the global variable that holds the request
+var client;  // the global variable that holds the request
 function processData(postString) {
-    client = new XMLHttpRequest() ;
-    postString=postString + "&port_id=" + httpPortNumber;
+    client = new XMLHttpRequest();
+    postString = postString + "&port_id=" + httpPortNumber;
     var url = 'http://developer.cege.ucl.ac.uk:' + httpPortNumber + "/uploadData";
-    client.open('POST',url,true);
+    client.open('POST', url, true);
     client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     client.onreadystatechange = dataUpload;
-    //send the post string
     client.send(postString);
 }
 
@@ -54,4 +53,13 @@ function dataUpload() {
 		//change the DIV to show the response
 		document.getElementById("dataUploadResult").innerHTML= client.responseText;
 	}
+}var client;  // the global variable that holds the request
+function processData(postString) {
+    client = new XMLHttpRequest();
+    postString = postString + "&port_id=" + httpPortNumber;
+    var url = 'http://developer.cege.ucl.ac.uk:' + httpPortNumber + "/uploadQuestion";
+    client.open('POST', url, true);
+    client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    client.onreadystatechange = dataUploaded;
+    client.send(postString);
 }
