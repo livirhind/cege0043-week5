@@ -3,9 +3,9 @@ function startDataUpload(){
 	//receive the text box values
 	var name= document.getElementById("name").value;
 	var surname= document.getElementById("surname").value;
-	var modulecode= document.getElementById("module").value;
+	var module= document.getElementById("module").value;
 	//put values in postring to send to the server
-	var postString="name="+name +"&surname="+surname+"&module="+modulecode;
+	var postString="name="+name +"&surname="+surname+"&module="+module;
 	//managing the select button, checkbox and radio buttons 
 	var checkString = "";
 	for (var i = 1; i<5;i++){
