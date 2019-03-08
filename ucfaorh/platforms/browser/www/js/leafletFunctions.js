@@ -1,6 +1,7 @@
 var client;
 var earthquakes;
 var earthquakelayer;
+var httpPortNumber = '30309';
 
 
 var testMarkerRed= L.AwesomeMarkers.icon({
@@ -36,9 +37,10 @@ function addPointLinePoly () {
 
     }
  //create the code to get the Earthquakes data using an XMLHttpRequest
-	function getEarthquakes(){
+	function getFormData(){
+		alert('Getting the form data')
 		client = new XMLHttpRequest();
-		client.open('GET', 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
+		client.open('GET', 'http://developer.cege.ucl.ac.uk:'+httpPortNumber+'/getFormData/'+httpPortNumber,true);
         client.onreadystatechange = earthquakeResponse; // note don't use earthquakeResponse() withh brackets as that doesn't work 
         client.send();
 	}
