@@ -14,7 +14,7 @@ function startup() {
 		loadW3HTML();
 	},false);
 	document.addEventListener('DOMContentLoaded', function(){
-		getFormData();
+		startFormDataLoad();
 	},false);
 }
 

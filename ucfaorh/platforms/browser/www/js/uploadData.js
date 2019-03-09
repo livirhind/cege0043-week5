@@ -36,6 +36,7 @@ function startDataUpload(){
 }
 
 var client;  // the global variable that holds the request
+
 function processData(postString) {
     client = new XMLHttpRequest();
     postString = postString + "&port_id=" + httpPortNumber;
