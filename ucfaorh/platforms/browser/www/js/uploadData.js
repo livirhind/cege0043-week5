@@ -3,9 +3,9 @@ function startDataUpload(){
 	//receive the text box values
 	var name= document.getElementById("name").value;
 	var surname= document.getElementById("surname").value;
-	var modulecode= document.getElementById("module").value;
+	var module= document.getElementById("module").value;
 	//put values in postring to send to the server
-	var postString="name="+name +"&surname="+surname+"&module="+modulecode;
+	var postString="name="+name +"&surname="+surname+"&module="+module;
 	//managing the select button, checkbox and radio buttons 
 	var checkString = "";
 	for (var i = 1; i<5;i++){
@@ -35,13 +35,15 @@ function startDataUpload(){
 	processData(postString);
 }
 
-var client; //the global variable that holds the request
+var client;  // the global variable that holds the request
+
 function processData(postString) {
-    client = new XMLHttpRequest() ;
-    client.open('POST', 'http://developer.cege.ucl.ac.uk:30309/reflectData',true);
+    client = new XMLHttpRequest();
+    postString = postString + "&port_id=" + httpPortNumber;
+    var url = 'http://developer.cege.ucl.ac.uk:' + httpPortNumber + "/uploadData";
+    client.open('POST', url, true);
     client.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     client.onreadystatechange = dataUpload;
-    //send the post string
     client.send(postString);
 }
 
